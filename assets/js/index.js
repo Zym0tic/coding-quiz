@@ -47,7 +47,8 @@
 
 var startButton = document.querySelector("#start-button");
 var time = document.querySelector('.time');
-var secondsLeft =61;
+var title = document.querySelector('.title');
+var secondsLeft =60;
 var quizBox = document.querySelector('quiz');
 var questionOne = {
     question: "What is my name?",
@@ -101,6 +102,13 @@ startButton.addEventListener('click', function () {
 
     // start quiz function
     function startQuiz() {
-        console.log("quix started");
+
+        // get rid of title elements
+        
+        title.setAttribute(
+        'style', 
+        'display: none;'
+        );
+        
 
     };
