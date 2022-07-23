@@ -45,11 +45,19 @@
 //      link to opening page
 // button to clear highscores
 
+
+// BUTTONS
 var startButton = document.querySelector("#start-button");
+var answerOne = document.querySelector('#answer-one');
+var answerTwo = document.querySelector('#answer-two');
+var answerThree = document.querySelector('#answer-three');
+var answerFour = document.querySelector('#answer-four');
 var time = document.querySelector('.time');
 var title = document.querySelector('.title');
 var secondsLeft =60;
-var quizBox = document.querySelector('quiz');
+var quizBox = document.querySelector('.quiz');
+var openQuiz = document.querySelector('.open-quiz');
+var question = document.querySelector('#question');
 var questionOne = {
     question: "What is my name?",
     answerOne: "Bob",
@@ -100,15 +108,28 @@ startButton.addEventListener('click', function () {
     });
 
 
-    // start quiz function
+    // start quiz functionquew
     function startQuiz() {
 
         // get rid of title elements
-        
+
         title.setAttribute(
         'style', 
         'display: none;'
         );
+
+        openQuiz.setAttribute(
+            'style',
+            'display: inline;'
+        );
+
+        for (i = 0; i < questions.length; i ++) {
+            question.textContent = questions[i].question;
+            answerOne.textContent = questions[i].answerOne;
+            answerTwo.textContent = questions[i].answerTwo;
+            answerThree.textContent = questions[i].answerThree;
+            answerFour.textContent = questions[i].answerFour;
+        };
         
 
-    };
+    }; 

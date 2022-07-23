@@ -34,9 +34,8 @@ p {
     background-color: blueviolet;
 }
 
-.answer-button {
+.open-quiz {
     display: none;
-
 }
 
 .time {
