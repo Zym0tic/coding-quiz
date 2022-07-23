@@ -45,13 +45,47 @@
 //      link to opening page
 // button to clear highscores
 
-var button = document.querySelector(".btn");
+var startButton = document.querySelector("#start-button");
 var time = document.querySelector('.time');
 var secondsLeft =61;
 var quizBox = document.querySelector('quiz');
+var questionOne = {
+    question: "What is my name?",
+    answerOne: "Bob",
+    answerTwo: "Luke",
+    answerThree: "Bill",
+    answerFour: "Mike",
+    rightAnswer: "Luke"
+};
+var questionTwo = {
+    question: "What is my name?",
+    answerOne: "Bob",
+    answerTwo: "Luke",
+    answerThree: "Bill",
+    answerFour: "Mike",
+    rightAnswer: "Luke"
+};
+var questionThree = {
+    question: "What is my name?",
+    answerOne: "Bob",
+    answerTwo: "Luke",
+    answerThree: "Bill",
+    answerFour: "Mike",
+    rightAnswer: "Luke"
+};
+var questionFour = {
+    question: "What is my name?",
+    answerOne: "Bob",
+    answerTwo: "Luke",
+    answerThree: "Bill",
+    answerFour: "Mike",
+    rightAnswer: "Luke"
+};
+var questions = [questionOne, questionTwo, questionThree, questionFour];
 
 
-button.addEventListener('click', function () {
+// click event
+startButton.addEventListener('click', function () {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         time.textContent = "Time: " + secondsLeft;
@@ -64,6 +98,8 @@ button.addEventListener('click', function () {
       startQuiz();
     });
 
+
+    // start quiz function
     function startQuiz() {
         console.log("quix started");
 
