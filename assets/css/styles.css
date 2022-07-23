@@ -1,0 +1,35 @@
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.game {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+.btn {
+    background-color: purple;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 42px;
+}
+
+.btn:hover {
+    background-color: blueviolet;
+}
