@@ -16,7 +16,7 @@ p {
     height: 150px;
 }
 
-.game {
+.quiz {
     margin: 0 auto;
     text-align: center;
     width: 50%;
@@ -32,4 +32,8 @@ p {
 
 .btn:hover {
     background-color: blueviolet;
+}
+
+.time {
+    font-weight: 700;
 }
