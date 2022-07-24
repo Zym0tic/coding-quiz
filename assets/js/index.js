@@ -48,6 +48,7 @@
 
 // BUTTONS
 var startButton = document.querySelector("#start-button");
+var answers = document.querySelectorAll("div.open-quiz > button");
 var answerOne = document.querySelector('#answer-one');
 var answerTwo = document.querySelector('#answer-two');
 var answerThree = document.querySelector('#answer-three');
@@ -129,6 +130,10 @@ startButton.addEventListener('click', function () {
             answerTwo.textContent = questions[i].answerTwo;
             answerThree.textContent = questions[i].answerThree;
             answerFour.textContent = questions[i].answerFour;
+            
+            answers.addEventListener('click', function () {
+                console.log('clicked');
+            });
         };
         
 
