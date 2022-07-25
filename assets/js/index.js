@@ -48,7 +48,6 @@
 
 // BUTTONS
 var startButton = document.querySelector("#start-button");
-var answers = document.querySelectorAll("div.open-quiz > button");
 var answerOne = document.querySelector('#answer-one');
 var answerTwo = document.querySelector('#answer-two');
 var answerThree = document.querySelector('#answer-three');
@@ -92,6 +91,8 @@ var questionFour = {
     rightAnswer: "Luke"
 };
 var questions = [questionOne, questionTwo, questionThree, questionFour];
+var answers = [answerOne, answerTwo, answerThree, answerFour];
+
 
 
 // click event
@@ -130,11 +131,14 @@ startButton.addEventListener('click', function () {
             answerTwo.textContent = questions[i].answerTwo;
             answerThree.textContent = questions[i].answerThree;
             answerFour.textContent = questions[i].answerFour;
-            
-            answers.addEventListener('click', function () {
-                console.log('clicked');
-            });
         };
         
+        for (j = 0; j< answers.length; j ++) {
+            answers[j].addEventListener('click', function() {
+                if (answers[j] === answers[j].rightAnswer){
+                    console.log("fkhoudjsfki");
+                }
 
+            });
+        }
     }; 
