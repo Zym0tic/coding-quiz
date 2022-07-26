@@ -63,19 +63,19 @@ var questionOne = {
   rightAnswer: "Luke",
 };
 var questionTwo = {
-  question: "What is my name?",
-  answers: ["Bob", "Luke", "Bill", "Mike"],
-  rightAnswer: "Luke",
+  question: "What is my dogs name?",
+  answers: ["Lily", "Stella", "Casca", "Gremlin"],
+  rightAnswer: "Casca",
 };
 var questionThree = {
-  question: "What is my name?",
-  answers: ["Bob", "Luke", "Bill", "Mike"],
-  rightAnswer: "Luke",
+  question: "What is my age?",
+  answers: ["29", "30", "31", "32"],
+  rightAnswer: "32",
 };
 var questionFour = {
-  question: "What is my name?",
-  answers: ["Bob", "Luke", "Bill", "Mike"],
-  rightAnswer: "Luke",
+  question: "Where was I born?",
+  answers: ["Montreal", "Boston", "Philadelphia", "Edmonton"],
+  rightAnswer: "Edmonton",
 };
 
 var questions = [questionOne, questionTwo, questionThree, questionFour];
@@ -108,7 +108,8 @@ function startQuiz() {
     openQuiz.appendChild(questionEl);
   
 
-    
+   for (i = 0; i < questions.length; i ++) {
+
     var buttonOne = document.createElement("button");
     var buttonTwo = document.createElement("button");
     var buttonThree = document.createElement("button");
@@ -119,10 +120,10 @@ function startQuiz() {
     buttonThree.className = "btn answer-button";
     buttonFour.className = "btn answer-button";
 
-    buttonOne.textContent = questions[0].answers[0];
-    buttonTwo.textContent = questions[0].answers[1];
-    buttonThree.textContent = questions[0].answers[2];
-    buttonFour.textContent = questions[0].answers[3];
+    buttonOne.textContent = questions[i].answers[0];
+    buttonTwo.textContent = questions[i].answers[1];
+    buttonThree.textContent = questions[i].answers[2];
+    buttonFour.textContent = questions[i].answers[3];
 
      buttonOne.addEventListener('click', function () {
 
@@ -135,7 +136,7 @@ function startQuiz() {
 
      buttonTwo.addEventListener('click', function () {
 
-      if (buttonTwo.textContent === questions[0].rightAnswer) {
+      if (buttonTwo.textContent === questions[i].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
@@ -144,7 +145,7 @@ function startQuiz() {
 
      buttonThree.addEventListener('click', function () {
 
-      if (buttonThree.textContent === questions[0].rightAnswer) {
+      if (buttonThree.textContent === questions[i].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
@@ -153,7 +154,7 @@ function startQuiz() {
 
      buttonFour.addEventListener('click', function () {
 
-      if (buttonFour.textContent === questions[0].rightAnswer) {
+      if (buttonFour.textContent === questions[i].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
@@ -165,6 +166,9 @@ function startQuiz() {
     openQuiz.appendChild(buttonTwo);
     openQuiz.appendChild(buttonThree);
     openQuiz.appendChild(buttonFour);
+
+   };
+
 
 };
 
