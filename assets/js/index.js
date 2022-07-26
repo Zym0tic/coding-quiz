@@ -114,48 +114,58 @@ function startQuiz() {
     var buttonThree = document.createElement("button");
     var buttonFour = document.createElement("button");
 
-    answerButton.className = "btn answer-button";
+    buttonOne.className = "btn answer-button";
+    buttonTwo.className = "btn answer-button";
+    buttonThree.className = "btn answer-button";
+    buttonFour.className = "btn answer-button";
 
-    buttonOne.textContent = questions[0].answers[i];
-    buttonTwo.textContent = questions[0].answers[i];
-    buttonThree.textContent = questions[0].answers[i];
-    buttonFour.textContent = questions[0].answers[i];
+    buttonOne.textContent = questions[0].answers[0];
+    buttonTwo.textContent = questions[0].answers[1];
+    buttonThree.textContent = questions[0].answers[2];
+    buttonFour.textContent = questions[0].answers[3];
 
-     buttonOne.addEventListener("click", function () {
+     buttonOne.addEventListener('click', function () {
+
       if (buttonOne.textContent === questions[0].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
-      };
-    }
+      }
+     });
 
-     buttonTwo.addEventListener("click", function () {
+     buttonTwo.addEventListener('click', function () {
+
       if (buttonTwo.textContent === questions[0].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
-      };
-    }
-     buttonThree.addEventListener("click", function () {
+      }
+     });
+
+     buttonThree.addEventListener('click', function () {
+
       if (buttonThree.textContent === questions[0].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
-      };
-    }
-     buttonFour.addEventListener("click", function () {
+      }
+     });
+
+     buttonFour.addEventListener('click', function () {
+
       if (buttonFour.textContent === questions[0].rightAnswer) {
         console.log("Right");
       } else {
         console.log("Wrong");
       }
-    }
-  
+     });
+    
+
     openQuiz.appendChild(buttonOne);
     openQuiz.appendChild(buttonTwo);
     openQuiz.appendChild(buttonThree);
     openQuiz.appendChild(buttonFour);
 
-}
+};
 
   
