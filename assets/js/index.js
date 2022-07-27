@@ -79,6 +79,7 @@ var questionFour = {
 };
 
 var questions = [questionOne, questionTwo, questionThree, questionFour];
+var questionNum = 0;
 var answers = [answerOne, answerTwo, answerThree, answerFour];
 
 // click event
@@ -97,79 +98,64 @@ startButton.addEventListener("click", function () {
 
 // start quiz function
 function startQuiz() {
-
   title.setAttribute("style", "display: none;");
 
   openQuiz.setAttribute("style", "display: inline;");
 
   var questionEl = document.createElement("h2");
-    questionEl.textContent = questions[0].question;
+  questionEl.textContent = questions[0].question;
 
-    openQuiz.appendChild(questionEl);
-  
+  openQuiz.appendChild(questionEl);
 
-   for (i = 0; i < questions.length; i ++) {
+  var buttonOne = document.createElement("button");
+  var buttonTwo = document.createElement("button");
+  var buttonThree = document.createElement("button");
+  var buttonFour = document.createElement("button");
 
-    var buttonOne = document.createElement("button");
-    var buttonTwo = document.createElement("button");
-    var buttonThree = document.createElement("button");
-    var buttonFour = document.createElement("button");
+  buttonOne.className = "btn answer-button";
+  buttonTwo.className = "btn answer-button";
+  buttonThree.className = "btn answer-button";
+  buttonFour.className = "btn answer-button";
 
-    buttonOne.className = "btn answer-button";
-    buttonTwo.className = "btn answer-button";
-    buttonThree.className = "btn answer-button";
-    buttonFour.className = "btn answer-button";
+  buttonOne.textContent = questions[0].answers[0];
+  buttonTwo.textContent = questions[0].answers[1];
+  buttonThree.textContent = questions[0].answers[2];
+  buttonFour.textContent = questions[0].answers[3];
 
-    buttonOne.textContent = questions[i].answers[0];
-    buttonTwo.textContent = questions[i].answers[1];
-    buttonThree.textContent = questions[i].answers[2];
-    buttonFour.textContent = questions[i].answers[3];
+  buttonOne.addEventListener("click", function () {
+    if (buttonOne.textContent === questions[0].rightAnswer) {
+      console.log("Right");
+    } else {
+      console.log("Wrong");
+    }
+  });
 
-     buttonOne.addEventListener('click', function () {
+  buttonTwo.addEventListener("click", function () {
+    if (buttonTwo.textContent === questions[0].rightAnswer) {
+      console.log("Right");
+    } else {
+      console.log("Wrong");
+    }
+  });
 
-      if (buttonOne.textContent === questions[0].rightAnswer) {
-        console.log("Right");
-      } else {
-        console.log("Wrong");
-      }
-     });
+  buttonThree.addEventListener("click", function () {
+    if (buttonThree.textContent === questions[0].rightAnswer) {
+      console.log("Right");
+    } else {
+      console.log("Wrong");
+    }
+  });
 
-     buttonTwo.addEventListener('click', function () {
+  buttonFour.addEventListener("click", function () {
+    if (buttonFour.textContent === questions[0].rightAnswer) {
+      console.log("Right");
+    } else {
+      console.log("Wrong");
+    }
+  });
 
-      if (buttonTwo.textContent === questions[i].rightAnswer) {
-        console.log("Right");
-      } else {
-        console.log("Wrong");
-      }
-     });
-
-     buttonThree.addEventListener('click', function () {
-
-      if (buttonThree.textContent === questions[i].rightAnswer) {
-        console.log("Right");
-      } else {
-        console.log("Wrong");
-      }
-     });
-
-     buttonFour.addEventListener('click', function () {
-
-      if (buttonFour.textContent === questions[i].rightAnswer) {
-        console.log("Right");
-      } else {
-        console.log("Wrong");
-      }
-     });
-    
-
-    openQuiz.appendChild(buttonOne);
-    openQuiz.appendChild(buttonTwo);
-    openQuiz.appendChild(buttonThree);
-    openQuiz.appendChild(buttonFour);
-
-   };
-
-
-};
-
-  
+  openQuiz.appendChild(buttonOne);
+  openQuiz.appendChild(buttonTwo);
+  openQuiz.appendChild(buttonThree);
+  openQuiz.appendChild(buttonFour);
+}
